@@ -1,0 +1,13 @@
+.textColor {
+    color: red;
+}
+
+.danger {
+    background-color: aqua;
+    color: red;
+}
+
+.text-size {
+    font-size: 50px;
+}
+

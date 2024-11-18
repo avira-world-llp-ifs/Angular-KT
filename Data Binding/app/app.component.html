@@ -1,0 +1,34 @@
+Hello {{title}}
+
+<button type="button" [disabled]="isDisabled">{{ myBtn }}</button>
+<img alt="angular" width="100" height="100" [src]="angularImage">
+
+
+<div [style.backgroundColor]="bgColor">
+  <h2 [style.color]="titleColor">Title</h2>
+  <p [style]="description">description</p> 
+</div>
+
+<h2 [class.testColor]="redTexts">Title</h2>
+<h2 [class.textColor]="redText==='yes'">Title</h2>
+
+<button (click)="incrementCounter()">Increment</button>
+<p>Counter: {{ counter }}</p>
+
+<input [(ngModel)]="inputText" placeholder="Enter Text">
+<p>You Entered: {{ inputText }}</p>
+
+<div>
+  <h1 *ngIf="isloggedin">I am Logged in</h1>
+  <ul>
+    <li *ngFor="let name of names; let i = index">
+     {{i + 1}} {{ name }}
+    </li>
+  </ul>
+  <h2>Ng Switch</h2>
+  <div [ngSwitch]="grade">
+    <p *ngSwitchCase="'A'">Excellent</p>
+    <p *ngSwitchCase="'B'">Good</p>
+    <p *ngSwitchDefault>Bad</p>
+  </div>
+</div>

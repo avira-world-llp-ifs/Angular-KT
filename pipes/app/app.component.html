@@ -1,4 +1,4 @@
-<h1> {{title | lowercase }}</h1>
+<!-- <h1> {{title | uppercase }}</h1>
 
 <div>
   <p>Today is {{ today }}</p>
@@ -14,4 +14,18 @@
 
 <p> {{ title | uppercase | append : "Tutorial" | uppercase }}</p>
 <p> {{ title | lowercase | append : "Tutorial" | lowercase }}</p>
-<p> {{ title | append : ("Tutorial" | uppercase) }}</p>
+<p> {{ title | append : ("Tutorial" | uppercase) }}</p> -->
+<p>{{ title | uppercase }}</p>
+<p>{{ title | lowercase }}</p>
+
+<p>{{ today | date }}</p>
+<p>{{ today | date : 'fullDate' }}</p>
+<p>{{ today | date : 'shortDate' }}</p>
+<p>{{ today | date : 'medium' }}</p>
+<p>{{ today | date: "hh:mm:ss" }}</p>
+<p>{{money | currency: "EUR"}}</p>
+<p>{{money | currency: "INR" : "symbol" : '2.1-4'}}</p>
+<p>{{money | number: '2.1-5'}}</p>
+<p>{{money | percent}}</p>
+<p>{{title | appendPipe : "Hello" | uppercase}}</p>
+<p>{{(title | uppercase) | append : ("Tutorial" | lowercase)}}</p>

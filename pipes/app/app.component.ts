@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'pipes';
   today: number =  Date.now();
-  money: number = 1.35;
+  money: number = 1.354647899544;
 }
