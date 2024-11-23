@@ -1,0 +1,17 @@
+<div class="sidebar" [class.active]="isSidebarOpen">
+    <div class="sidebar-header">
+        <h2>DEMO App</h2>
+        <button class="close-btn" (click)="toggleSidebar()">&#10005;</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li (click)="changeTabName('dashboard')">Dashboard</li>
+        <li (click)="changeTabName('home')">Home</li>
+        <li (click)="changeTabName('profile')">Profile</li>        
+    </ul>
+</div>
+<div class="main-content">
+    <button class="menu-btn" (click)="toggleSidebar()">☰ Menu</button>
+    <!-- <ng-content></ng-content> -->
+    <h4>Count = {{count}}</h4>
+    <app-main-page [tabName]="tabName" [count]="count" (countValue)="countIncremntCall($event)"></app-main-page>
+</div>
